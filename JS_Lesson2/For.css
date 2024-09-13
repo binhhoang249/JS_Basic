@@ -1,0 +1,27 @@
+.square {
+    height: 20px;
+    width: 20px;
+    float: left;
+    border: 1px solid gray;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background-color: yellow;
+}
+.redsquare{
+    height: 20px;
+    width: 20px;
+    float: left;
+    border: 1px solid gray;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background-color: red;
+}
+.graysquare{
+    height: 20px;
+    width: 20px;
+    float: left;
+    border: 1px solid gray;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background-color: gray;
+}

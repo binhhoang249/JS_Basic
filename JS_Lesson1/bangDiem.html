@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="myForm">
+        <div class="main" >
+            <h2>Bang diem cua em</h2>
+            <p>semester1 <input type="text" name="" id="nhaphocki1"></p>
+            <p>semester2 <input type="text" name="" id="nhaphocki2"></p>
+            <p>Year <input type="number" name="" id="nam"></p>
+            <p>Summarise <input type="number" name="" id="tinhtong"></p>
+            <p id="ketqua"></p>
+            <button onclick="tinhDiem()">Ok</button>
+            <button onclick="resetForm()">Cancel</button>
+        </div>
+        <script>
+            function tinhDiem() {
+                var hocki1 = parseFloat(document.getElementById('nhaphocki1').value);
+                var hocki2 = parseFloat(document.getElementById('nhaphocki2').value);
+                var nam = parseInt(document.getElementById('nam').value);
+                while (nam >=1 && nam<=3){
+                    if(nam===1){
+                        document.getElementById('tinhtong').value = (hocki1+hocki2)/2;
+                        if(((hocki1+hocki2)/2)>9){
+                            document.getElementById('ketqua').innerHTML = "Xep loai: Gioi";
+                        }else if(((hocki1+hocki2)/2)>8){
+                            document.getElementById('ketqua').innerHTML = "Xep loai: Kha";
+                        }else{
+                            document.getElementById('ketqua').innerHTML = "Xep loai: Trung binh";
+                        }
+                    }else if(nam===2){
+                        document.getElementById('tinhtong').value = (hocki1+(hocki2*2))/3;
+                        if(((hocki1+hocki2*2)/3)>9){
+                            document.getElementById('ketqua').innerHTML = "Xep loai: Gioi";
+                        }else if(((hocki1+hocki2*2)/3)>8){
+                            document.getElementById('ketqua').innerHTML = "Xep loai: Kha";
+                        }else{
+                            document.getElementById('ketqua').innerHTML = "Xep loai: Trung binh";
+                        }
+                    }else{
+                        document.getElementById('tinhtong').value = (hocki1+(hocki2*3))/2;
+                        if(((hocki1+hocki2*2)/4)>9){
+                            document.getElementById('ketqua').innerHTML = "Xep loai: Gioi";
+                        }else if(((hocki1+hocki2*2)/4)>8){
+                            document.getElementById('ketqua').innerHTML = "Xep loai: Kha";
+                        }else{
+                            document.getElementById('ketqua').innerHTML = "Xep loai: Trung binh";
+                        }
+                    }
+                    break;
+                }
+            }
+        </script>
+    </form>
+</body>
+</html>
