@@ -6,4 +6,4 @@ var myString = "Hoc JS tai F8!";
 console.log(myString.length);
 //2. Find index
 console.log(myString.indexOf('JS'))
-// -1 là không tìm thấy 
+// -1 là không tìm thấy  
